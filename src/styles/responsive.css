@@ -1,0 +1,144 @@
+@media (max-width: 1120px) {
+  .task-meta-editor {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .nav {
+    padding: 0 var(--space-12);
+  }
+
+  .nav__logo {
+    margin-right: var(--space-16);
+  }
+
+  .nav__links {
+    gap: var(--space-12);
+  }
+
+  .launch-page,
+  .tasks-page,
+  .settings-page {
+    grid-template-columns: 1fr;
+    padding: var(--space-16);
+    overflow: auto;
+  }
+
+  .launch-hero,
+  .next-list {
+    padding-top: 0;
+  }
+
+  .task-card--large {
+    min-height: 160px;
+  }
+
+  .next-list {
+    overflow: visible;
+  }
+
+  .tasks-list,
+  .task-detail {
+    min-height: 360px;
+  }
+
+  .tasks-list {
+    overflow: visible;
+  }
+
+  .tasks-list__scroll {
+    overflow: visible;
+  }
+
+  .tasks-page:not(.tasks-page--mobile-detail) .task-detail {
+    display: none;
+  }
+
+  .tasks-page--mobile-detail .tasks-list {
+    display: none;
+  }
+
+  .tasks-page--mobile-detail .task-detail {
+    min-height: calc(100vh - 84px);
+  }
+
+  .task-detail__back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .step-row {
+    grid-template-columns: 24px minmax(0, 1fr);
+  }
+
+  .step-row__side,
+  .step-row__minutes {
+    grid-column: 2;
+    justify-self: start;
+    justify-content: flex-start;
+  }
+
+  .review-summary,
+  .task-next-step,
+  .review-item,
+  .task-detail__header,
+  .setting-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .review-summary__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .review-evidence-card__header,
+  .review-timeline-panel > button,
+  .task-settings__toggle {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .review-evidence-card__meta {
+    justify-items: start;
+  }
+
+  .review-evidence-event {
+    grid-template-columns: 1fr;
+  }
+
+  .review-timeline::before {
+    left: 28px;
+  }
+
+  .review-item {
+    grid-template-columns: 20px minmax(0, 1fr);
+  }
+
+  .review-item__time,
+  .review-item__duration {
+    grid-column: 2;
+  }
+
+  .review-item__dot {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+  }
+
+  .quick-task__spice-options {
+    grid-template-columns: 1fr;
+  }
+
+  .task-meta-editor {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-mode__actions {
+    width: min(100%, 360px);
+  }
+
+  .focus-mode__actions .btn {
+    width: 100%;
+  }
+}

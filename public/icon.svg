@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="FocusFlow">
+  <rect width="512" height="512" rx="112" fill="#2f7350"/>
+  <circle cx="256" cy="256" r="144" fill="#faf9f6"/>
+  <path d="M170 266c28-74 144-74 172 0" fill="none" stroke="#2f7350" stroke-width="34" stroke-linecap="round"/>
+  <path d="M206 312h100" fill="none" stroke="#2f7350" stroke-width="34" stroke-linecap="round"/>
+  <circle cx="344" cy="180" r="24" fill="#7ec8a4"/>
+</svg>

@@ -1,0 +1,19 @@
+node_modules
+build
+.env
+.env.*
+server/.env
+server/.env.*
+!server/.env.example
+server/data
+
+# Course deliverables kept outside the public code repository
+*.pptx
+*.docx
+*.pdf
+PRESENTATION_GUIDE.md
+EXECUTIVE_SUMMARY.md
+DELIVERY_NOTES.md
+DESIGN.md
+DEMO_SCRIPT.md
+references/

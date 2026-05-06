@@ -1,0 +1,134 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  flex-shrink: 0;
+  padding: 0 var(--space-24);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-right: var(--space-32);
+  color: var(--color-action);
+  background: transparent;
+  font-family: var(--font-heading);
+  font-size: var(--font-lg);
+  font-weight: var(--weight-bold);
+}
+
+.nav__logo img {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--space-24);
+  flex: 1;
+  height: 100%;
+}
+
+.nav__link {
+  position: relative;
+  color: var(--color-text-secondary);
+  background: transparent;
+  font-weight: var(--weight-medium);
+}
+
+.nav__link::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: transparent;
+  content: "";
+}
+
+.nav__link:hover,
+.nav__link--active {
+  color: var(--color-action);
+}
+
+.nav__link--active::after {
+  background: var(--color-action);
+}
+
+.nav__settings {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  background: transparent;
+  font-size: var(--font-lg);
+}
+
+.nav__settings:hover,
+.nav__settings--active {
+  color: var(--color-action);
+  background: var(--color-surface-hover);
+}
+
+.nav__user {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-left: var(--space-8);
+  color: var(--color-text-secondary);
+  font-size: var(--font-sm);
+}
+
+.nav__user span {
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav__user button {
+  min-height: 32px;
+  padding: 0 var(--space-10, 10px);
+  color: var(--color-text-secondary);
+  background: var(--color-surface-hover);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: var(--font-sm);
+}
+
+.nav__user button:hover {
+  color: var(--color-action);
+  border-color: var(--color-action);
+}
+
+.page {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  animation: pageIn 240ms var(--ease-out);
+}
+
+.page--center {
+  display: grid;
+  place-items: center;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
