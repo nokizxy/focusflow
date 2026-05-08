@@ -91,10 +91,23 @@ SQLite 当前包含：
 
 ## 本地运行
 
+从 GitHub 下载代码：
+
+```bash
+git clone https://github.com/nokizxy/focusflow.git
+cd focusflow
+```
+
+如果已经在本机项目目录中，可以直接进入项目：
+
+```bash
+cd /Users/eleanorchow/Documents/New\ project/focusflow-react
+```
+
 安装依赖：
 
 ```bash
-npm install
+npm ci
 ```
 
 创建环境变量：
@@ -103,29 +116,62 @@ npm install
 cp server/.env.example server/.env
 ```
 
-在 `server/.env` 中配置：
+如果需要在线 AI 拆解，在 `server/.env` 中配置：
 
 ```bash
 SILICONFLOW_API_KEY=your_key_here
 ```
 
-启动后端：
+没有配置 API Key 时，登录、添加任务、本地模板、专注模式和回顾页仍然可以运行；只有在线 AI 拆解会不可用。
+
+开发环境需要开两个终端。
+
+第一个终端启动后端：
 
 ```bash
 npm run server
 ```
 
-启动前端：
+成功后会看到：
+
+```text
+FocusFlow backend listening on http://127.0.0.1:8787
+```
+
+第二个终端启动前端：
 
 ```bash
 PORT=3004 HOST=127.0.0.1 BROWSER=none npm start
 ```
 
-打开：
+成功后会看到：
+
+```text
+Compiled successfully!
+You can now view focusflow-react in the browser.
+http://127.0.0.1:3004
+```
+
+浏览器打开：
 
 ```text
 http://127.0.0.1:3004
 ```
+
+如果端口被占用，可以先查看占用进程：
+
+```bash
+lsof -nP -iTCP:8787 -sTCP:LISTEN
+lsof -nP -iTCP:3004 -sTCP:LISTEN
+```
+
+看到 `PID` 后关闭旧进程：
+
+```bash
+kill PID
+```
+
+其中前端运行在 `3004`，负责页面显示；后端运行在 `8787`，负责登录、保存数据、读取 SQLite 和调用 AI。
 
 ## 生产构建
 
